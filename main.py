@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 import subprocess
 import time
 
-CHANNEL = "trainwreckstv"   # Kick channel
+CHANNEL = "kalnins"   # Kick channel
 CHECK_INTERVAL = 60         # seconds between checks
 YT_DLP_PATH = "yt-dlp"      # assumes yt-dlp installed in venv
 
