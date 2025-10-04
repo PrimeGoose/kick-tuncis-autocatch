@@ -87,7 +87,7 @@ nohup python main.py > recorder.log 2>&1 &
 Edit these variables in `main.py`:
 
 ```python
-CHANNEL = "trainwreckstv"    # Channel to monitor
+CHANNEL = "kalnins"    # Channel to monitor
 CHECK_INTERVAL = 60           # Seconds between checks
 YT_DLP_PATH = "yt-dlp"       # Path to yt-dlp executable
 ```
