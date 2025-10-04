@@ -5,7 +5,7 @@ Automatically record Kick live streams using Playwright + yt-dlp.
 ## 📂 Project Structure
 
 ```
-kick-recorder/
+kick-tuncis-autocatch-main/
 ├── main.py          # recorder script
 ├── requirements.txt # dependencies
 ├── .gitignore       # git exclusions
@@ -17,7 +17,7 @@ kick-recorder/
 
 ### 1. Clone/Navigate to the project
 ```bash
-cd "kick downloader"
+cd kick-tuncis-autocatch-main
 ```
 
 ### 2. Create virtual environment
@@ -107,9 +107,10 @@ playwright install chromium
 ```
 
 ### Stream not detected
-- Check the channel name is correct
+- Check the channel name is correct (case-sensitive)
 - Verify the stream is actually live on https://kick.com/channelname
 - Some streams may take a few minutes to appear as "live"
+- The detection waits 8 seconds for the page to load - if still failing, increase the wait time in `main.py`
 
 ## ✅ Next Steps
 
