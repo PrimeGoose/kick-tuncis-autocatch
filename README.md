@@ -17,32 +17,62 @@ kick-tuncis-autocatch-main/
 
 ## 🔧 Setup
 
-### 1. Clone/Navigate to the project
+### 🪟 Windows (PowerShell)
 
-```bash
-cd kick-tuncis-autocatch-main
-```
+> ⚠️ Do **not** type commands inside the Python shell (`>>>`). These must be run in **PowerShell** or **CMD**, not inside Python.
 
-### 2. Create virtual environment
+```powershell
+# 1. Navigate to the project folder
+cd "D:\Downloads\kick-tuncis-autocatch-main"
 
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+# 2. Create a virtual environment
+python -m venv venv
 
-### 3. Install dependencies
+# 3. Activate it
+venv\Scripts\activate
 
-```bash
-pip3 install -r requirements.txt
+# 4. Install dependencies (Playwright + yt-dlp)
+pip install -r requirements.txt
+
+# 5. Download Chromium browser for Playwright
 playwright install chromium
+
+# 6. Run the recorder
+python main.py
 ```
+
+If you see `ModuleNotFoundError: No module named 'playwright'`, it means you didn’t install requirements inside the activated venv. Activate it first, then rerun the install command.
+
+---
+
+### 🍎 macOS / 🐧 Linux
+
+```bash
+# 1. Navigate to the project folder
+cd kick-tuncis-autocatch-main
+
+# 2. Create a virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# 3. Install dependencies (Playwright + yt-dlp)
+pip3 install -r requirements.txt
+
+# 4. Download Chromium browser for Playwright
+playwright install chromium
+
+# 5. Run the recorder
+python3 main.py
+```
+
+---
 
 ## 🚀 Usage
 
 ### Run the recorder
 
 ```bash
-python3 main.py
+python main.py   # or python3 main.py on macOS/Linux
 ```
 
 The script will:
@@ -79,10 +109,10 @@ nohup python3 main.py > recorder.log 2>&1 &
 
 ## 📝 How It Works
 
-1. **Live Detection**: Uses Playwright to check the Kick page for live indicators
-2. **Recording**: Passes the Kick URL directly to yt-dlp, which extracts and records the stream
-3. **Monitoring**: Continuously checks every 60 seconds when offline
-4. **Auto-restart**: After a recording ends, waits 60 seconds then resumes monitoring
+1. **Live Detection**: Uses Playwright to check the Kick page for live indicators.
+2. **Recording**: Passes the Kick URL directly to yt-dlp, which extracts and records the stream.
+3. **Monitoring**: Continuously checks every 60 seconds when offline.
+4. **Auto-restart**: After a recording ends, waits 60 seconds then resumes monitoring.
 
 ## 🎯 Features
 
@@ -109,14 +139,22 @@ YT_DLP_PATH = "yt-dlp"       # Path to yt-dlp executable
 Make sure yt-dlp is installed in your venv:
 
 ```bash
-pip3 install yt-dlp
+pip install yt-dlp  # or pip3 install yt-dlp
 ```
 
-### "Chromium not found"
+### "playwright: command not found" or "ModuleNotFoundError: No module named 'playwright'"
 
-Run the Playwright installer:
+Make sure you installed dependencies **after activating** your venv:
 
 ```bash
+# Activate first
+venv\Scripts\activate   # Windows
+source venv/bin/activate # macOS/Linux
+
+# Then install dependencies
+pip install -r requirements.txt
+
+# Finally, install browser binaries
 playwright install chromium
 ```
 
