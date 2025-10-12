@@ -10,6 +10,7 @@ Automatically record Kick live streams using Playwright + yt-dlp.
 kick-tuncis-autocatch-main/
 ├── main.py          # recorder script
 ├── requirements.txt # dependencies
+├── run_recorder.bat # Windows launcher (optional)
 ├── .gitignore       # git exclusions
 ├── /media           # recordings saved here (auto-created)
 └── README.md
@@ -20,6 +21,20 @@ kick-tuncis-autocatch-main/
 ### 🪟 Windows (PowerShell)
 
 > ⚠️ Do **not** type commands inside the Python shell (`>>>`). These must be run in **PowerShell** or **CMD**, not inside Python.
+
+You can either run everything **manually** or simply double-click the **`run_recorder.bat`** file.
+
+#### Option 1 – Run automatically (recommended)
+
+Just run:
+
+```powershell
+run_recorder.bat
+```
+
+This batch file automatically creates a virtual environment, installs dependencies, ensures Playwright is available, and starts recording.
+
+#### Option 2 – Manual setup
 
 ```powershell
 # 1. Navigate to the project folder
