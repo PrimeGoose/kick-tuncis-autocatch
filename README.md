@@ -31,17 +31,20 @@ python -m venv venv
 # 3. Activate it
 venv\Scripts\activate
 
-# 4. Install dependencies (Playwright + yt-dlp)
+# 4. Install dependencies (yt-dlp)
 pip install -r requirements.txt
 
-# 5. Download Chromium browser for Playwright
+# 5. Manually install Playwright globally so Windows can find it
+pip install playwright
+
+# 6. Download Chromium browser for Playwright
 playwright install chromium
 
-# 6. Run the recorder
+# 7. Run the recorder
 python main.py
 ```
 
-If you see `ModuleNotFoundError: No module named 'playwright'`, it means you didn’t install requirements inside the activated venv. Activate it first, then rerun the install command.
+If you see `ModuleNotFoundError: No module named 'playwright'`, it means Playwright was not installed globally. Run `pip install playwright` outside the venv, then retry.
 
 ---
 
@@ -144,17 +147,10 @@ pip install yt-dlp  # or pip3 install yt-dlp
 
 ### "playwright: command not found" or "ModuleNotFoundError: No module named 'playwright'"
 
-Make sure you installed dependencies **after activating** your venv:
+Make sure Playwright is installed globally:
 
 ```bash
-# Activate first
-venv\Scripts\activate   # Windows
-source venv/bin/activate # macOS/Linux
-
-# Then install dependencies
-pip install -r requirements.txt
-
-# Finally, install browser binaries
+pip install playwright
 playwright install chromium
 ```
 
