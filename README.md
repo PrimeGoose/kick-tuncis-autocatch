@@ -63,6 +63,37 @@ If you see `ModuleNotFoundError: No module named 'playwright'`, it means Playwri
 
 ---
 
+### 🪟 Windows – Save to Downloads Folder Instead of /media
+
+By default, the script saves recordings inside the project folder under `/media`.
+To save them directly to your **Windows Downloads** folder instead, modify this part of `main.py`:
+
+```python
+# Replace this:
+MEDIA_DIR = Path(__file__).parent / "media"
+MEDIA_DIR.mkdir(exist_ok=True)
+
+# With this:
+from pathlib import Path
+MEDIA_DIR = Path.home() / "Downloads" / "KickRecordings"
+MEDIA_DIR.mkdir(parents=True, exist_ok=True)
+```
+
+This will save all recordings into:
+
+```
+C:\Users\<YourName>\Downloads\KickRecordings\
+```
+
+If you prefer to save directly into the Downloads folder without the subfolder, use:
+
+```python
+MEDIA_DIR = Path.home() / "Downloads"
+MEDIA_DIR.mkdir(exist_ok=True)
+```
+
+---
+
 ### 🍎 macOS / 🐧 Linux
 
 ```bash
