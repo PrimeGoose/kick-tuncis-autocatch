@@ -1,5 +1,7 @@
 # Kick Recorder
 
+<span style="color:red; font-weight:bold;">⚠️ Minimum Python version required: 3.8 or higher</span>
+
 Automatically record Kick live streams using Playwright + yt-dlp.
 
 ## 📂 Project Structure
