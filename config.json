@@ -1,0 +1,9 @@
+{
+    "channel": "trainwreckstv",
+    "recorder_name": "Recorder #1",
+    "check_interval": 60,
+    "discord": {
+        "enabled": true,
+        "webhook_url": "https://discord.com/api/webhooks/1301071356284239922/2wM41dUqnOA5ENJ5or4Dt5-HIghCzBdny52wzpnNwzRVbhraCsRWl4RFnWZ3FSQXntHH"
+    }
+}

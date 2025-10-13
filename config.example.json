@@ -1,0 +1,10 @@
+{
+  "channel": "channel_name_here",
+  "recorder_name": "Recorder #1",
+  "check_interval": 60,
+  "discord": {
+    "enabled": false,
+    "webhook_url": ""
+  }
+}
+
