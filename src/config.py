@@ -66,7 +66,7 @@ class Config:
             print("[ERROR] Please update 'channel' in config.json!")
             print("=" * 60)
             print("\nOpen config.json and set 'channel' to the Kick channel you want to monitor.")
-            print("Example: \"channel\": \"trainwreckstv\"\n")
+            print("Example: \"channel\": \"kalnins\"\n")
             sys.exit(1)
         
         if not config.get("recorder_name"):

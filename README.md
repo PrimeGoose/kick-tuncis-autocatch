@@ -241,7 +241,7 @@ All settings are managed through `config.json`:
 
 ### Required Fields
 
-- **`channel`**: The Kick channel name to monitor (e.g., "trainwreckstv")
+- **`channel`**: The Kick channel name to monitor (e.g., "kalnins")
 - **`recorder_name`**: A custom name to identify this recorder instance (e.g., "Home PC", "Server #1")
 
 ### Optional Fields
@@ -283,7 +283,7 @@ The script detected the default placeholder value. Open `config.json` and change
 ```
 to your actual Kick channel name:
 ```json
-"channel": "trainwreckstv"
+"channel": "kalnins"
 ```
 
 ### "Please update 'recorder_name' in config.json"
